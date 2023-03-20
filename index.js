@@ -3,11 +3,12 @@ const saturdayFun = activity => activity ? 'This Saturday, I want to bathe my do
 
 const mondayWork = activity => activity ? "This Monday, I will work from home." : "This Monday, I will go to the office.";
 
-function wrapAdjective(special) {
-    console.log*(`You are ${special}`)
-    const extraFunction = wrapAdjective("*")
-    return extraFunction()
+function wrapAdjective(character) {
+    return function inner(adjective = '*') {
+        const part1 = `You are ${character}${adjective}${character}!`
+        return part1
+    }
 }
 
 
-wrapAdjective("special")
+wrapAdjective("*")("special");
